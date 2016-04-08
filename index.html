@@ -13,7 +13,7 @@
     });
     angular.module('todo').controller('myCtrl2',function($scope){
       $scope.message = 'AngularJs';
-      $scope.list=['wake','drive','work','go home']
+      $scope.list = [{item:"bbg", price:"$99"}, {item:"shed", price:"$99"}]
     })
 
   </script>
@@ -35,7 +35,7 @@
 
   <div ng-controller="myCtrl2">
     {{message}}
-
+    <div ng-repeat = "todo in list"><button>{{todo.item}}</button><button>{{todo.price}}</button></div>
   </div>
 </div>
 
